@@ -7,11 +7,10 @@ require('dotenv').config()
 
 
 // middleware
+app.use(express.static("./public"))
 app.use(express.json())   // if we don't use this them we dont have data in req.body
 
-app.get('/hello',(rq,res)=>{
-    res.send("Task Manager app")
-})
+
 
 app.use('/api/v1/tasks',tasks)
 
