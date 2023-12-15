@@ -3,7 +3,7 @@ const asyncWrapper = (fn) => {
         try {
             await fn(req,res,next)
         } catch (error) {
-            next(error)
+            next(error)  // seding the error to our custom build error handler middleware
         }
     }
 }
